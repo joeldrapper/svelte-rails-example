@@ -1,0 +1,25 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "strict": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/frontend/*"]
+    }
+  },
+  "include": [
+    "app/frontend/**/*.ts",
+    "app/frontend/**/*.js",
+    "app/frontend/**/*.svelte",
+    "app/frontend/**/*.svelte.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "public", "tmp"]
+}
